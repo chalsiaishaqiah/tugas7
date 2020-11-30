@@ -14,7 +14,7 @@ public class DataProvider {
     private static List<Kucing> initDataKucing(Context ctx) {
         List<Kucing> kucings = new ArrayList<>();
         kucings.add(new Kucing("Angora", "Turki",
-                "Aslinya berasal dari Ankara, Turki dengan ciri khas berbulu panjang dan lembut", R.drawable.cat_angora));
+                "Aslinyaberasal dari Ankara, Turki dengan ciri khas berbulu panjang dan lembut", R.drawable.cat_angora));
         kucings.add(new Kucing("Bengal", "Inggris",
                 "Merupakan hasil persilangan antara Kucing Leopard Asia dengan kucing domestik Inggris", R.drawable.cat_bengal));
         kucings.add(new Kucing("Birmani", "Birma/Myanmar",

@@ -104,4 +104,16 @@ public class GaleriActivity extends AppCompatActivity {
             tampilkanProfil();
         }
     }
+
+    private class Button {
+    }
+
+    private class TextView {
+    }
+
+    private class ImageView {
+    }
+
+    private class Intent {
+    }
 }

@@ -1,15 +1,16 @@
 package simple.example.hewanpedia;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton btnKucing,btnAnjing,btnIkan;
+    ImageButton btnKucing,btnAnjing,btnDinosaurus;
     public static final String JENIS_GALERI_KEY = "JENIS_GALERI";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
     private void inisialisasiView() {
         btnKucing = findViewById(R.id.btn_buka_ras_kucing);
         btnAnjing = findViewById(R.id.btn_buka_ras_anjing);
-        btnIkan = findViewById(R.id.btn_buka_ras_ikan);
+        btnDinosaurus = findViewById(R.id.btn_buka_ras_dinosaurus);
         btnKucing.setOnClickListener(view -> bukaGaleri("Kucing"));
         btnAnjing.setOnClickListener(view -> bukaGaleri("Anjing"));
-        btnIkan.setOnClickListener(view -> bukaGaleri("Ikan"));
+        btnDinosaurus.setOnClickListener(view -> bukaGaleri("Dinosaurus"));
     }
 
     private void bukaGaleri(String jenisHewan) {
@@ -34,5 +35,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(JENIS_GALERI_KEY, jenisHewan);
         startActivity(intent);
     }
+
 
 }

@@ -30,10 +30,10 @@
         />
 
     <TextView
-        android:id="@+id/txJenis"
+        android:id="@+id/txRas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jenis Hewan"
+        android:text="Ras Hewan"
         android:textColor="@color/design_default_color_primary_dark"
         android:textSize="17sp"
         />

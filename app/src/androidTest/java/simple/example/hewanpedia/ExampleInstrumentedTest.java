@@ -23,4 +23,7 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("simple.example.kocheng", appContext.getPackageName());
     }
+
+    private class Context {
+    }
 }

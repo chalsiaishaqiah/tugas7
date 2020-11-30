@@ -1,13 +1,11 @@
 package simple.example.hewanpedia;
 
-import android.content.Context;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import simple.example.hewanpedia.model.Anjing;
+import simple.example.hewanpedia.model.Dinosaurus;
 import simple.example.hewanpedia.model.Hewan;
-import simple.example.hewanpedia.model.Ikan;
 import simple.example.hewanpedia.model.Kucing;
 
 public class DataProvider {
@@ -48,27 +46,27 @@ public class DataProvider {
     }
 
 
-    private static List<Ikan> initDataIkan(Context ctx) {
-        List<Ikan> ikans = new ArrayList<>();
-        ikans.add(new Ikan("Guppy", "Amerika",
-                "memiliki bentuk tubuh seperti wanita yang mengenakan rok", R.drawable.ikan_guppy));
-        ikans.add(new Ikan("Cupang", "Indonesia ",
-                "adalah ikan yang berasal dari jenis ikan berukuran kecil dengan ukuran sekitar 2,5 cm dan dapat tumbuh hingga 12,5 cm", R.drawable.ikan_cupang));
-        ikans.add(new Ikan("Molly", "Brazil",
-                "memiliki perut yang buncit dan tubuh yang bundar", R.drawable.ikan_molly));
-        ikans.add(new Ikan("Platy", "Guiana",
-                "memiliki perut yang buncit dan tubuh yang bundar", R.drawable.ikan_platy));
-        ikans.add(new Ikan("Mas", "Asia",
-                "memiliki perut yang buncit dan tubuh yang bundar", R.drawable.ikan_mas));
-        ikans.add(new Ikan("Balasak", "Himalaya",
-                "memiliki warna-warna yang sangat cantik", R.drawable.ikan_balasak));
-        return ikans;
+    private static List<Dinosaurus> initDataDinosaurus(Context ctx) {
+        List<Dinosaurus> Dinosaurus = new ArrayList<>();
+        Dinosaurus.add(new Dinosaurus("Tyronnosaurus Rex", "Mongolia",
+                "Jenis dinosaurus yang sangat populer ini biasa dikenal dengan T-Rex. T-Rex juga dikenal sebagai predator ganas dengan gigitan tertajam di antara binatang purba lainnya.", R.drawable.tyrannosaurus_rex));
+        Dinosaurus.add(new Dinosaurus("Velociraptor", "Rusia",
+                "Merupakan jenis dinosaurus pemangsa yang mirip dengan si T-Rex. Namun kalau si Raptor ini ukurannya lebih kecil dari T-Rex.", R.drawable.velociraptor));
+        Dinosaurus.add(new Dinosaurus("Spinosaurus", "Maroko",
+                "Merupakan theropoda raksasa yang dapat tumbuh hingga 15 meter dengan tinggi sekitar 5 meter dan berat mencapai 7,6 ton.", R.drawable.spinosaurus));
+        Dinosaurus.add(new Dinosaurus("Ankylosaurus", "Inggris",
+                "Merupakan jenis dinosaurus dengan tubuh sepanjang 9 meter. Sedangkan beratnya mencapai 9 ton. Dinosaurus ini memiliki cangkang tubuh yang keras sebagai perisai pertahanan.", R.drawable.ankylosaurus));
+        Dinosaurus.add(new Dinosaurus("Stegosaurus", "Amerika Utara",
+                "Jenis dinosaurus ini merupakan yang paling mudah diidentifikasi, karena identik dengan memiliki baris sisik yang saling silang di punggungnya.", R.drawable.stegosaurus));
+        Dinosaurus.add(new Dinosaurus("Brontosaurus", "Amerika Serikat",
+                "Apatosaurus atau yang biasa dikenal dengan Brontosaurus merupakan salah satu jenis dinosaurus yang memiliki leher panjang dan tubuhnya bisa mencapai 26 meter dengan berat 32 ton.", R.drawable.brontosaurus));
+        return Dinosaurus;
     }
 
     private static void initAllHewans(Context ctx) {
         hewans.addAll(initDataKucing(ctx));
         hewans.addAll(initDataAnjing(ctx));
-        hewans.addAll(initDataIkan(ctx));
+        hewans.addAll(initDataDinosaurus(ctx));
     }
 
     public static List<Hewan> getAllHewan(Context ctx) {
@@ -91,4 +89,6 @@ public class DataProvider {
         return hewansByType;
     }
 
+    private static class Context {
+    }
 }
